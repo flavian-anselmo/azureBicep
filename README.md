@@ -1,0 +1,2 @@
+# gas-delivery-api
+# azureBicep
