@@ -7,7 +7,7 @@ azure bicep
 param location string = resourceGroup().location
 param name string = resourceGroup().name
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01'={
-  kind:''
+  kind:'StorageV2'
   location:location
   name:name 
   sku:{
@@ -17,4 +17,5 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01'={
     accessTier:'Hot'
   }
 }
+
 
