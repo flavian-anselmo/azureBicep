@@ -9,8 +9,8 @@ azure bicep
 
 */
 @description('Specifies the location for resources.')
-param location string = 'westus3'
-param storageAccountName string = 'sportsbikestorageaccount${uniqueString(resourceGroup().id)}'
+param location string = resourceGroup().location
+param storageAccountName string = 'sportsbikestorage${uniqueString(resourceGroup().id)}'
 param appServiceAppName string = 'sportBikeProductLauch${uniqueString(resourceGroup().id)}'
 var servicePlanName = 'sportBike-launch-plan'
 
